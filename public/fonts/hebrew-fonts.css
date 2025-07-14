@@ -1,0 +1,470 @@
+/* Hebrew fonts for PDF export */
+/* System fonts */
+@font-face {
+  font-family: 'Noto Sans Hebrew';
+  src: url('https://fonts.gstatic.com/s/notosanshebrew/v43/nwpBtKU3IiRrk_-9SjqS8V3lqgEoWNa3JQS_Ew.woff2') format('woff2'),
+       url('https://fonts.googleapis.com/css2?family=Noto+Sans+Hebrew:wght@400;700&display=swap') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+  unicode-range: U+0590-05FF, U+200C-2010, U+20AA, U+25CC, U+FB1D-FB4F;
+}
+
+@font-face {
+  font-family: 'Heebo';
+  src: url('https://fonts.gstatic.com/s/heebo/v22/NGSpv5_NC0k9P_v6ZUCbLRAHxK1EiS2cckOnz02SXQ.woff2') format('woff2'),
+       url('https://fonts.googleapis.com/css2?family=Heebo:wght@400;700&display=swap') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+  unicode-range: U+0590-05FF, U+200C-2010, U+20AA, U+25CC, U+FB1D-FB4F;
+}
+
+@font-face {
+  font-family: 'David Libre';
+  src: url('https://fonts.gstatic.com/s/davidlibre/v14/snfus0W_99N64iuYSvp4W_l86p6TYS-Y.woff2') format('woff2'),
+       url('https://fonts.googleapis.com/css2?family=David+Libre:wght@400;700&display=swap') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+  unicode-range: U+0590-05FF, U+200C-2010, U+20AA, U+25CC, U+FB1D-FB4F;
+}
+
+/* Bold variants */
+@font-face {
+  font-family: 'Noto Sans Hebrew';
+  src: url('https://fonts.gstatic.com/s/notosanshebrew/v43/nwpCtKU3IiRrk_-9SjqS8V3lqgEoWNa3JQS_Ew.woff2') format('woff2'),
+       url('https://fonts.googleapis.com/css2?family=Noto+Sans+Hebrew:wght@700&display=swap') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+  unicode-range: U+0590-05FF, U+200C-2010, U+20AA, U+25CC, U+FB1D-FB4F;
+}
+
+@font-face {
+  font-family: 'Heebo';
+  src: url('https://fonts.gstatic.com/s/heebo/v22/NGSpv5_NC0k9P_v6ZUCbLRAHxK1EiS2cckOnz02SXQ.woff2') format('woff2'),
+       url('https://fonts.googleapis.com/css2?family=Heebo:wght@700&display=swap') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+  unicode-range: U+0590-05FF, U+200C-2010, U+20AA, U+25CC, U+FB1D-FB4F;
+}
+
+@font-face {
+  font-family: 'David Libre';
+  src: url('https://fonts.gstatic.com/s/davidlibre/v14/snfus0W_99N64iuYSvp4W_l86p6TYS-Y.woff2') format('woff2'),
+       url('https://fonts.googleapis.com/css2?family=David+Libre:wght@700&display=swap') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+  unicode-range: U+0590-05FF, U+200C-2010, U+20AA, U+25CC, U+FB1D-FB4F;
+}
+
+/* Custom Hebrew fonts */
+@font-face {
+  font-family: 'Fb Oriya';
+  src: url('https://ahmrghovmuxowchijumv.supabase.co/storage/v1/object/public/fonts//FbOriya-Regular.otf') format('opentype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+  unicode-range: U+0590-05FF, U+200C-2010, U+20AA, U+25CC, U+FB1D-FB4F;
+}
+
+@font-face {
+  font-family: 'Fb Oriya';
+  src: url('https://ahmrghovmuxowchijumv.supabase.co/storage/v1/object/public/fonts//FbOriya-Bold.otf') format('opentype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+  unicode-range: U+0590-05FF, U+200C-2010, U+20AA, U+25CC, U+FB1D-FB4F;
+}
+
+@font-face {
+  font-family: 'Fb Melateef';
+  src: url('https://ahmrghovmuxowchijumv.supabase.co/storage/v1/object/public/fonts//FbMelatefMudgash.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+  unicode-range: U+0590-05FF, U+200C-2010, U+20AA, U+25CC, U+FB1D-FB4F;
+}
+
+@font-face {
+  font-family: 'BASEGOLTA';
+  src: url('https://ahmrghovmuxowchijumv.supabase.co/storage/v1/object/public/fonts//BASEGOLTA-REGULAR.TTF') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+  unicode-range: U+0590-05FF, U+200C-2010, U+20AA, U+25CC, U+FB1D-FB4F;
+}
+
+@font-face {
+  font-family: 'Horev CLM Heavy';
+  src: url('https://ahmrghovmuxowchijumv.supabase.co/storage/v1/object/public/fonts//Horev%20CLM%20Heavy.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+  unicode-range: U+0590-05FF, U+200C-2010, U+20AA, U+25CC, U+FB1D-FB4F;
+}
+
+@font-face {
+  font-family: 'Suez One';
+  src: url('https://ahmrghovmuxowchijumv.supabase.co/storage/v1/object/public/fonts//Suez%20One.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+  unicode-range: U+0590-05FF, U+200C-2010, U+20AA, U+25CC, U+FB1D-FB4F;
+}
+
+@font-face {
+  font-family: '3Dumb';
+  src: url('https://ahmrghovmuxowchijumv.supabase.co/storage/v1/object/public/fonts//3Dumb.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Yiddish';
+  src: url('https://ahmrghovmuxowchijumv.supabase.co/storage/v1/object/public/fonts//yiddish6.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+  unicode-range: U+0590-05FF, U+200C-2010, U+20AA, U+25CC, U+FB1D-FB4F;
+}
+
+@font-face {
+  font-family: 'Yiddish';
+  src: url('https://ahmrghovmuxowchijumv.supabase.co/storage/v1/object/public/fonts//yiddish7.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+  unicode-range: U+0590-05FF, U+200C-2010, U+20AA, U+25CC, U+FB1D-FB4F;
+}
+
+@font-face {
+  font-family: 'Phinster';
+  src: url('https://ahmrghovmuxowchijumv.supabase.co/storage/v1/object/public/fonts//phinst.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+  unicode-range: U+0590-05FF, U+200C-2010, U+20AA, U+25CC, U+FB1D-FB4F;
+}
+
+@font-face {
+  font-family: 'Phinster';
+  src: url('https://ahmrghovmuxowchijumv.supabase.co/storage/v1/object/public/fonts//phinstb.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+  unicode-range: U+0590-05FF, U+200C-2010, U+20AA, U+25CC, U+FB1D-FB4F;
+}
+
+@font-face {
+  font-family: 'LiaYeffet';
+  src: url('https://ahmrghovmuxowchijumv.supabase.co/storage/v1/object/public/fonts//LiaYeffet-Regular-3.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+  unicode-range: U+0590-05FF, U+200C-2010, U+20AA, U+25CC, U+FB1D-FB4F;
+}
+
+/* RTL text helper classes */
+.rtl-text {
+  direction: rtl;
+  unicode-bidi: plaintext;
+  text-align: right;
+  letter-spacing: 0 !important;
+  word-spacing: 0 !important;
+}
+
+.hebrew-text {
+  font-family: 'Noto Sans Hebrew', 'Heebo', 'David Libre', sans-serif;
+  direction: rtl;
+  unicode-bidi: plaintext;
+  letter-spacing: 0;
+  word-spacing: 0;
+}
+
+/* Additional Hebrew fonts */
+@font-face {
+  font-family: '3Dumb';
+  src: url('https://ahmrghovmuxowchijumv.supabase.co/storage/v1/object/public/fonts//3Dumb.ttf') format('truetype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Yiddish 8';
+  src: url('https://ahmrghovmuxowchijumv.supabase.co/storage/v1/object/public/fonts//yiddish8.ttf') format('truetype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Yiddish 7';
+  src: url('https://ahmrghovmuxowchijumv.supabase.co/storage/v1/object/public/fonts//yiddish7.ttf') format('truetype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Yiddish 6';
+  src: url('https://ahmrghovmuxowchijumv.supabase.co/storage/v1/object/public/fonts//yiddish6.ttf') format('truetype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Suez One';
+  src: url('https://ahmrghovmuxowchijumv.supabase.co/storage/v1/object/public/fonts//Suez%20One.ttf') format('truetype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Phinster';
+  src: url('https://ahmrghovmuxowchijumv.supabase.co/storage/v1/object/public/fonts//phinst.ttf') format('truetype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Phinster Bold';
+  src: url('https://ahmrghovmuxowchijumv.supabase.co/storage/v1/object/public/fonts//phinstb.ttf') format('truetype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'LiaYeffet-Regular';
+  src: url('https://ahmrghovmuxowchijumv.supabase.co/storage/v1/object/public/fonts//LiaYeffet-Regular-3.ttf') format('truetype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'LiaBatkol-regular';
+  src: url('https://ahmrghovmuxowchijumv.supabase.co/storage/v1/object/public/fonts//LiaBatkol-regular.ttf') format('truetype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Horev CLM Heavy';
+  src: url('https://ahmrghovmuxowchijumv.supabase.co/storage/v1/object/public/fonts//Horev%20CLM%20Heavy.ttf') format('truetype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Goli-Regular';
+  src: url('https://ahmrghovmuxowchijumv.supabase.co/storage/v1/object/public/fonts//Goli-Regular') format('truetype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Fb Oriya';
+  src: url('https://ahmrghovmuxowchijumv.supabase.co/storage/v1/object/public/fonts//FbOriya-Regular.otf') format('opentype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Fb Oriya Bold';
+  src: url('https://ahmrghovmuxowchijumv.supabase.co/storage/v1/object/public/fonts//FbOriya-Bold.otf') format('opentype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Fb Melateef';
+  src: url('https://ahmrghovmuxowchijumv.supabase.co/storage/v1/object/public/fonts//FbMelatefMudgash.ttf') format('truetype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'FbBenveniste-Regular';
+  src: url('https://ahmrghovmuxowchijumv.supabase.co/storage/v1/object/public/fonts//FbBenveniste-Regular') format('truetype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'FbAstrobol-Medium';
+  src: url('https://ahmrghovmuxowchijumv.supabase.co/storage/v1/object/public/fonts//FbAstrobol-Mediun.ttf') format('truetype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'FbAbsolutiCon-Regular';
+  src: url('https://ahmrghovmuxowchijumv.supabase.co/storage/v1/object/public/fonts//FbAbsolutiCon-Regular') format('truetype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'FbAbsolutiCon-Medium';
+  src: url('https://ahmrghovmuxowchijumv.supabase.co/storage/v1/object/public/fonts//FbAbsolutiCon-Medium') format('truetype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'BASEGOLTA';
+  src: url('https://ahmrghovmuxowchijumv.supabase.co/storage/v1/object/public/fonts//BASEGOLTA-REGULAR.TTF') format('truetype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'AlexBrush-Regular';
+  src: url('https://ahmrghovmuxowchijumv.supabase.co/storage/v1/object/public/fonts//AlexBrush-Regular.ttf') format('truetype');
+  font-display: swap;
+}
+
+/* Custom Hebrew Fonts */
+@font-face {
+  font-family: 'Fb Melateef';
+  src: url('https://ahmrghovmuxowchijumv.supabase.co/storage/v1/object/public/fonts//FbMelatefMudgash.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Fb Oriya';
+  src: url('https://ahmrghovmuxowchijumv.supabase.co/storage/v1/object/public/fonts//FbOriya-Regular.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Fb Oriya Bold';
+  src: url('https://ahmrghovmuxowchijumv.supabase.co/storage/v1/object/public/fonts//FbOriya-Bold.otf') format('opentype');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'BASEGOLTA';
+  src: url('https://ahmrghovmuxowchijumv.supabase.co/storage/v1/object/public/fonts//BASEGOLTA-REGULAR.TTF') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Horev CLM Heavy';
+  src: url('https://ahmrghovmuxowchijumv.supabase.co/storage/v1/object/public/fonts//Horev%20CLM%20Heavy.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Suez One';
+  src: url('https://ahmrghovmuxowchijumv.supabase.co/storage/v1/object/public/fonts//Suez%20One.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: '3Dumb';
+  src: url('https://ahmrghovmuxowchijumv.supabase.co/storage/v1/object/public/fonts//3Dumb.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Phinster';
+  src: url('https://ahmrghovmuxowchijumv.supabase.co/storage/v1/object/public/fonts//phinst.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Phinster Bold';
+  src: url('https://ahmrghovmuxowchijumv.supabase.co/storage/v1/object/public/fonts//phinstb.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'LiaYeffet-Regular';
+  src: url('https://ahmrghovmuxowchijumv.supabase.co/storage/v1/object/public/fonts//LiaYeffet-Regular-3.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Yiddish 6';
+  src: url('https://ahmrghovmuxowchijumv.supabase.co/storage/v1/object/public/fonts//yiddish6.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Yiddish 7';
+  src: url('https://ahmrghovmuxowchijumv.supabase.co/storage/v1/object/public/fonts//yiddish7.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Yiddish 8';
+  src: url('https://ahmrghovmuxowchijumv.supabase.co/storage/v1/object/public/fonts//yiddish8.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'FbAbsolutiCon-Medium';
+  src: url('https://ahmrghovmuxowchijumv.supabase.co/storage/v1/object/public/fonts//FbAbsolutiCon-Medium') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'FbAbsolutiCon-Regular';
+  src: url('https://ahmrghovmuxowchijumv.supabase.co/storage/v1/object/public/fonts//FbAbsolutiCon-Regular') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'FbAstrobol-Medium';
+  src: url('https://ahmrghovmuxowchijumv.supabase.co/storage/v1/object/public/fonts//FbAstrobol-Mediun.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'FbBenveniste-Regular';
+  src: url('https://ahmrghovmuxowchijumv.supabase.co/storage/v1/object/public/fonts//FbBenveniste-Regular') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Goli-Regular';
+  src: url('https://ahmrghovmuxowchijumv.supabase.co/storage/v1/object/public/fonts//Goli-Regular') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'LiaBatkol-regular';
+  src: url('https://ahmrghovmuxowchijumv.supabase.co/storage/v1/object/public/fonts//LiaBatkol-regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Font preload links - add to head */
+/* 
+<link rel="preload" href="https://ahmrghovmuxowchijumv.supabase.co/storage/v1/object/public/fonts//FbMelatefMudgash.ttf" as="font" type="font/ttf" crossorigin>
+<link rel="preload" href="https://ahmrghovmuxowchijumv.supabase.co/storage/v1/object/public/fonts//FbOriya-Regular.otf" as="font" type="font/otf" crossorigin>
+<link rel="preload" href="https://ahmrghovmuxowchijumv.supabase.co/storage/v1/object/public/fonts//BASEGOLTA-REGULAR.TTF" as="font" type="font/ttf" crossorigin>
+<link rel="preload" href="https://ahmrghovmuxowchijumv.supabase.co/storage/v1/object/public/fonts//Horev%20CLM%20Heavy.ttf" as="font" type="font/ttf" crossorigin>
+<link rel="preload" href="https://ahmrghovmuxowchijumv.supabase.co/storage/v1/object/public/fonts//Suez%20One.ttf" as="font" type="font/ttf" crossorigin>
+*/

@@ -1,0 +1,13 @@
+{
+  "imports": {
+    "npm:openai@4.28.0": "npm:openai@4.28.0",
+    "npm:@supabase/supabase-js@2.39.3": "npm:@supabase/supabase-js@2.39.3",
+    "npm:lumaai": "npm:lumaai",
+    "npm:resend@3.2.0": "npm:resend@3.2.0",
+    "npm:html2canvas@1.4.1": "npm:html2canvas@1.4.1",
+    "npm:jspdf@2.5.1": "npm:jspdf@2.5.1"
+  },
+  "tasks": {
+    "start": "deno run --allow-net --allow-env --allow-read index.ts"
+  }
+}
