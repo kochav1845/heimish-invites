@@ -1,0 +1,1083 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Poppins:wght@400;500;600;700&family=DM+Sans:wght@400;500;600;700&family=Work+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&family=Outfit:wght@400;500;600;700&family=Michroma:wght@400&family=Bebas+Neue:wght@400&family=Playfair+Display:wght@400;700&family=Abril+Fatface:wght@400&family=Raleway:wght@400;500;600;700&family=Oswald:wght@400;500;600;700&family=Archivo+Black:wght@400&family=Anton:wght@400&family=Lora:wght@400;700&display=swap');
+
+
+h1 {
+  font-family: 'Michroma', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@keyframes scaleJump {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.animate-gradient {
+  animation: gradient 3s ease infinite;
+}
+
+.scale-animation {
+  animation: scaleJump 0.5s ease-in-out forwards;
+}
+
+.animate-scroll {
+  animation: scroll 30s linear infinite;
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --color: #4973ff;
+  --glow-hue: 222deg;
+  --shadow-hue: 180deg;
+  --spring-easing: linear(
+    0, 0.002, 0.01 0.9%, 0.038 1.8%, 0.156, 0.312 5.8%, 0.789 11.1%, 1.015 14.2%,
+    1.096, 1.157, 1.199, 1.224 20.3%, 1.231, 1.231, 1.226, 1.214 24.6%,
+    1.176 26.9%, 1.057 32.6%, 1.007 35.5%, 0.984, 0.968, 0.956, 0.949 42%,
+    0.946 44.1%, 0.95 46.5%, 0.998 57.2%, 1.007, 1.011 63.3%, 1.012 68.3%,
+    0.998 84%, 1
+  );
+  --spring-duration: 1.33s;
+}
+
+@layer base {
+  html, body {
+    overflow-x: hidden;
+  }
+  html {
+    font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    font-display: swap;
+  }
+  
+  body {
+    @apply bg-black text-white;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    position: relative; 
+  }
+
+  /* Font loading optimization */
+  .font-loading {
+    font-display: swap;
+  }
+
+  /* Prevent layout shift during font loading */
+  h1, .font-michroma {
+    font-family: 'Michroma', 'Courier New', monospace;
+    font-display: swap;
+  }
+
+  /* Simple CSS animations to replace heavy motion components */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .animate-fade-in {
+    animation: fadeIn 0.6s ease-out forwards;
+  }
+
+  .animate-fade-in-delay {
+    animation: fadeIn 0.6s ease-out 0.3s forwards;
+  }
+
+  .animate-fade-in-delay-2 {
+    animation: fadeIn 0.6s ease-out 0.6s forwards;
+  }
+}
+
+.text-glow {
+  text-shadow: 0 0 20px rgba(255, 255, 255, 0.3),
+               0 0 40px rgba(56, 189, 248, 0.2),
+               0 0 60px rgba(56, 189, 248, 0.1);
+}
+
+.glow {
+  text-shadow: 0 0 20px rgba(56, 189, 248, 0.5),
+               0 0 40px rgba(56, 189, 248, 0.3),
+               0 0 60px rgba(56, 189, 248, 0.2);
+}
+
+.waves {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.waves::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  bottom: -150px;
+  transform: translate(-50%, 0) rotate(0deg);
+  width: 300vw;
+  height: 300vw;
+  border-radius: 44%;
+  background: rgba(73, 115, 255, 0.5);
+  animation: rotate-waves 15s linear infinite;
+  z-index: 1;
+}
+
+@keyframes rotate-waves {
+  0% {
+    transform: translate(-50%, 0) rotate(0deg);
+  }
+  100% {
+    transform: translate(-50%, 0) rotate(360deg);
+  }
+}
+
+.curved-edge {
+  border-radius: 50% 50% 0 0;
+  transform: scaleX(1.5);
+}
+
+a-hole {
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+a-hole:before {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: 2;
+  display: block;
+  width: 150%;
+  height: 140%;
+  background: radial-gradient(ellipse at 50% 55%, transparent 10%, black 50%);
+  transform: translate3d(-50%, -50%, 0);
+  content: "";
+}
+
+a-hole:after {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: 5;
+  display: block;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(
+    ellipse at 50% 75%,
+    #a900ff 20%,
+    transparent 75%
+  );
+  mix-blend-mode: overlay;
+  transform: translate3d(-50%, -50%, 0);
+  content: "";
+}
+
+@keyframes aura-glow {
+  0% {
+    background-position: 0 100%;
+  }
+  100% {
+    background-position: 0 300%;
+  }
+}
+
+a-hole .aura {
+  position: absolute;
+  top: -71.5%;
+  left: 50%;
+  z-index: 3;
+  width: 30%;
+  height: 140%;
+  background: linear-gradient(
+      20deg,
+      #00f8f1,
+      #ffbd1e20 16.5%,
+      #fe848f 33%,
+      #fe848f20 49.5%,
+      #00f8f1  66%,
+      #00f8f160 85.5%,
+      #ffbd1e 100%
+    )
+    0 100% / 100% 200%;
+  border-radius: 0 0 100% 100%;
+  filter: blur(50px);
+  mix-blend-mode: plus-lighter;
+  opacity: 0.75;
+  transform: translate3d(-50%, 0, 0);
+  animation: aura-glow 5s infinite linear;
+}
+
+a-hole .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  width: 100%;
+  height: 100%;
+  background: repeating-linear-gradient(
+    transparent,
+    transparent 1px,
+    white 1px,
+    white 2px
+  );
+  mix-blend-mode: overlay;
+  opacity: 0.5;
+}
+
+a-hole canvas {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.page {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.title {
+  position: fixed;
+  bottom: 10%;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  font-family: sans-serif;
+}
+
+#globe-3d, #globe-2d-overlay, #globe-popup-overlay, .globe-popup {
+  display: block;
+  position: absolute;
+}
+
+#globe-2d-overlay, #globe-popup-overlay {
+  pointer-events: none;
+}
+
+.globe-popup {
+  top: 0;
+  left: 0;
+  background-color: white;
+  opacity: 0;
+  color: #111;
+  font-family: sans-serif;
+  padding: 5px 10px;
+  font-size: 15px;
+  border-radius: 3px;
+  filter: drop-shadow(0px 0px 3px #555555);
+}
+
+.terminal-output {
+  border-radius: 1em;
+  background-color: #131;
+  background-image: radial-gradient(ellipse 500% 100% at 50% 90%, transparent, #121);
+  height: 70vh;
+  padding: 2em;
+  box-shadow: inset 0 0 10em 1em rgba(0, 0, 0, 0.5);
+  overflow: auto;
+  font-family: monospace;
+  color: rgba(128, 255, 128, 0.8);
+  position: relative;
+}
+
+.terminal-output::before,
+.terminal-output::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  pointer-events: none;
+}
+
+.terminal-output::before {
+  background-image: linear-gradient(
+    0deg,
+    transparent 0%,
+    rgba(32, 128, 32, 0.2) 2%,
+    rgba(32, 128, 32, 0.8) 3%,
+    rgba(32, 128, 32, 0.2) 3%,
+    transparent 100%
+  );
+  animation: scan 7.5s linear infinite;
+  background-repeat: no-repeat;
+}
+
+.terminal-output::after {
+  background-image:
+    radial-gradient(ellipse 50% 15% at 50% 15%, rgba(255, 255, 255, 0.05), transparent),
+    radial-gradient(ellipse 50% 10% at 50% 12%, rgba(255, 255, 255, 0.1), transparent),
+    radial-gradient(ellipse 50% 5% at 50% 10%, rgba(255, 255, 255, 0.1), transparent),
+    radial-gradient(ellipse 50% 3% at 50% 9%, rgba(255, 255, 255, 0.1), transparent),
+    radial-gradient(ellipse 200% 20% at 50% 0%, rgba(0, 0, 0, 0.5), transparent),
+    linear-gradient(0deg, rgba(0, 0, 0, 0.2) 50%, transparent 50%);
+  background-size: 100% 100%, 100% 100%, 100% 100%, 100% 100%, 100% 100%, 100% 0.25ch;
+}
+
+@keyframes scan {
+  0% {
+    background-position: 0 -100vh;
+  }
+  35%,
+  100% {
+    background-position: 0 100vh;
+  }
+}
+
+.terminal-output q {
+  display: block;
+  border-right: 1ch solid currentColor;
+  animation: blink 0.5s step-end infinite;
+  text-shadow: 0 0 1ex #3f3, 0 0 2px rgba(255, 255, 255, 0.8);
+  margin-bottom: 1em;
+  line-height: 150%;
+}
+
+.terminal-output q::before {
+  content: "> ";
+}
+
+@keyframes blink {
+  0%,
+  49% {
+    border-right-color: transparent;
+  }
+  50%,
+  100% {
+    border-right-color: currentColor;
+  }
+}
+
+.carousel-container {
+  margin: 4% auto;
+  width: 210px;
+  height: 140px;
+  position: relative;
+  perspective: 1000px;
+}
+
+#carousel {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  transform-style: preserve-3d;
+  animation: rotation 20s infinite linear;
+}
+
+#carousel:hover {
+  animation-play-state: paused;
+}
+
+#carousel figure {
+  display: block;
+  position: absolute;
+  width: 186px;
+  height: 116px;
+  left: 10px;
+  top: 10px;
+  background: linear-gradient(45deg, #00ffff, #8a2be2);
+  border: transparent;
+  padding: 5px;
+}
+
+#carousel figure img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: all 0.5s ease;
+  cursor: pointer;
+}
+
+#carousel figure img:hover {
+  transform: scale(1.2);
+}
+
+@keyframes rotation {
+  from {
+    transform: rotateY(0deg);
+  }
+  to {
+    transform: rotateY(360deg);
+  }
+}
+
+#demo {
+  position: relative;
+  width: 800px;
+  height: 300px;
+  margin: auto;
+  overflow: hidden;
+}
+
+#demo h3 {
+  position: absolute;
+  font-family: 'Michroma', sans-serif;
+  font-weight: 700;
+  margin: 0;
+  padding: 0;
+  width: 100vh;
+  text-align: center;
+  visibility: hidden;
+  font-size: 120px;
+  top: 65px;
+}
+
+.screen-img {
+  width: 100%;
+  display: block;
+}
+
+.stand-img {
+  width: 60%;
+  margin: 0 auto;
+  margin-top: -20px;
+  transform: translateY(10px) scale(0.8);
+  pointer-events: none;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* Tech Showcase Animations */
+@keyframes gradientFlow {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.tech-box-gradient {
+  background-size: 200% 200%;
+  animation: gradientFlow 3s ease infinite;
+}
+
+/* shimmer*/
+@property --shimmer {
+  syntax: "<angle>";
+  inherits: false;
+  initial-value: 33deg;
+}
+
+@keyframes shimmer {
+  0% {
+    --shimmer: 0deg;
+  }
+  100% {
+    --shimmer: 360deg;
+  }
+}
+
+@keyframes shine {
+  0% {
+    opacity: 0;
+  }
+  15% {
+    opacity: 1;
+  }
+  55% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes text {
+  0% {
+    background-position: 100% center;
+  }    
+  100% {
+    background-position: -100% center;
+  }    
+}
+
+.shimmer-wrapper {
+  color: var(--bg);
+  font-weight: 600;
+  position: relative;
+  isolation: isolate;
+  box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.1);
+  border-radius: 0.66em;
+  scale: 1;
+  transition: all var(--spring-duration) var(--spring-easing);
+  overflow: hidden;
+  width: 100%;
+  box-sizing: border-box;
+  max-width: 100%;
+  contain: layout;
+}
+
+.shimmer-wrapper:hover:not(:active),
+.shimmer-wrapper.active {
+  transition-duration: calc(var(--spring-duration)*0.5);
+  scale: 1.05;
+  box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.1);
+  overflow: hidden;
+  max-width: 100%;
+}
+
+.shimmer-wrapper:active {
+  scale: 1.02;
+  transition-duration: calc(var(--spring-duration)*0.5);
+  overflow: hidden;
+  max-width: 100%;
+}
+
+.shimmer {
+  position: absolute;
+  inset: -40px;
+  border-radius: inherit;
+  pointer-events: none;
+  overflow: hidden;
+  max-width: calc(100% + 80px);
+  mask-image: conic-gradient(
+    from var(--shimmer, 0deg),
+    transparent 0%,
+    transparent 10%,
+    black 36%,
+    black 45%,
+    transparent 50%,
+    transparent 60%,
+    black 85%,
+    black 95%,
+    transparent 100%
+  );
+  mask-size: cover;
+  mix-blend-mode: plus-lighter;
+  animation: shimmer 1s linear infinite both;
+}
+
+/* Form input fixes - prevent shimmer interference */
+input, select, textarea {
+  position: relative;
+  z-index: 10;
+  transform: none !important;
+  animation: none !important;
+  transition: border-color 0.2s ease, background-color 0.2s ease !important;
+}
+
+/* Ensure form containers don't interfere with inputs */
+.relative {
+  position: relative;
+}
+
+.relative input,
+.relative select, 
+.relative textarea {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.shimmer-wrapper:hover .shimmer::before,
+.shimmer-wrapper:hover .shimmer::after,
+.shimmer-wrapper.active .shimmer::before,
+.shimmer-wrapper.active .shimmer::after {
+  opacity: 1;
+  animation: shine 1.2s ease-in 1 forwards;
+}
+
+.shimmer::before,
+.shimmer::after {
+  transition: all 0.5s ease;
+  opacity: 0;
+  content: "";
+  border-radius: inherit;
+  position: absolute;
+  mix-blend-mode: color;
+  inset: 40px;
+  pointer-events: none;
+}
+
+.shimmer::before {
+  box-shadow:
+    0 0 8px 1px #5ecbff,
+    0 0 14px 3px #8a4fff,
+    0 0 22px 5px #ff66cc;
+  z-index: -1;
+}
+
+.shimmer::after {
+  box-shadow:
+    0 0 8px 1px #5ecbff,
+    0 0 14px 3px #8a4fff,
+    0 0 22px 5px #ff66cc;
+  z-index: 2;
+}
+
+.shimmer-wrapper .text {
+  color: transparent;
+  background-clip: text;
+  background-repeat: no-repeat;
+  background-size: 300% 300%;
+  background-position: center 200%;
+}
+
+.shimmer-wrapper:hover .text,
+.shimmer-wrapper.active .text {
+  animation: text .66s ease-in 1 both;
+}
+
+/* Hebrew font support */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Hebrew:wght@100;200;300;400;500;600;700;800;900&family=Heebo:wght@100;200;300;400;500;600;700;800;900&family=Rubik:wght@300;400;500;600;700;800;900&family=Assistant:wght@200;300;400;500;600;700;800&family=Alef:wght@400;700&family=Secular+One&family=Varela+Round&family=Suez+One&family=Amatic+SC:wght@400;700&family=Frank+Ruhl+Libre:wght@300;400;500;600;700;800;900&family=Tinos:wght@400;700&family=David+Libre:wght@400;500;700&family=Miriam+Libre:wght@400;700&family=Bellefair&family=Cormorant+Garamond:wght@300;400;500;600;700&family=EB+Garamond:wght@400;500;600;700;800&family=Libre+Baskerville:wght@400;700&family=Crimson+Text:wght@400;600;700&family=Cardo:wght@400;700&family=Gentium+Plus:wght@400;700&display=swap');
+
+/* Fix for Hebrew text rendering in PDF exports */
+.rtl-text {
+  direction: rtl;
+  unicode-bidi: embed;
+}
+
+.hebrew-text {
+  direction: rtl;
+  unicode-bidi: embed;
+}
+
+/* Fix for admin preview */
+.admin-preview {
+  overflow: hidden;
+  background-color: #f8f9fa;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  transform-origin: center center;
+  margin: 0 auto;
+  position: relative;
+}
+
+/* Additional Hebrew font support */
+@font-face {
+  font-family: 'FbOriya-Regular';
+  src: url('https://ahmrghovmuxowchijumv.supabase.co/storage/v1/object/public/fonts//FbOriya-Regular.otf') format('opentype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'FbOriya-Bold';
+  src: url('https://ahmrghovmuxowchijumv.supabase.co/storage/v1/object/public/fonts//FbOriya-Bold.otf') format('opentype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'FbMelatefMudgash';
+  src: url('https://ahmrghovmuxowchijumv.supabase.co/storage/v1/object/public/fonts//FbMelatefMudgash.ttf') format('truetype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'BASEGOLTA';
+  src: url('https://ahmrghovmuxowchijumv.supabase.co/storage/v1/object/public/fonts//BASEGOLTA-REGULAR.TTF') format('truetype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Horev CLM Heavy';
+  src: url('https://ahmrghovmuxowchijumv.supabase.co/storage/v1/object/public/fonts//Horev%20CLM%20Heavy.ttf') format('truetype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Suez One';
+  src: url('https://ahmrghovmuxowchijumv.supabase.co/storage/v1/object/public/fonts//Suez%20One.ttf') format('truetype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: '3Dumb';
+  src: url('https://ahmrghovmuxowchijumv.supabase.co/storage/v1/object/public/fonts//3Dumb.ttf') format('truetype');
+  font-display: swap;
+}
+
+/* Yiddish fonts */
+@font-face {
+  font-family: 'Yiddish';
+  src: url('https://ahmrghovmuxowchijumv.supabase.co/storage/v1/object/public/fonts//yiddish6.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Yiddish';
+  src: url('https://ahmrghovmuxowchijumv.supabase.co/storage/v1/object/public/fonts//yiddish7.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Fix for PDF export - ensure proper text rendering */
+.pdf-export-ready {
+  text-rendering: geometricPrecision !important;
+  width: 210mm !important;
+  height: 297mm !important;
+  overflow: hidden !important;
+  background-color: white !important; 
+  padding: 0mm !important;
+  margin: 0mm !important;
+  box-sizing: border-box !important;
+  position: relative !important;
+  display: block !important;
+  transform: none !important; 
+  transform-origin: top left !important; 
+  page-break-after: always !important; 
+  page-break-inside: avoid !important; 
+}
+
+.pdf-text {
+  text-rendering: geometricPrecision !important;
+}
+
+/* Fix for PDF export text */
+.pdf-export-ready * {
+  text-rendering: geometricPrecision !important;
+  box-sizing: border-box !important;
+  transform-origin: center center !important;
+}
+
+/* Fix for admin preview */
+.admin-preview {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+}
+
+.admin-preview * {
+  text-rendering: geometricPrecision !important;
+}
+
+/* Font preview styles */
+select option {
+  font-size: 16px !important;
+  font-family: inherit !important;
+}
+
+/* Force font family on options */
+select option[value="Noto Sans Hebrew"] {
+  font-family: "Noto Sans Hebrew", sans-serif !important;
+}
+
+select option[value="Heebo"] {
+  font-family: "Heebo", sans-serif !important;
+}
+
+select option[value="David Libre"] {
+  font-family: "David Libre", serif !important;
+}
+
+select option[value="Fb Oriya"] {
+  font-family: "Fb Oriya", sans-serif !important;
+}
+
+select option[value="Fb Melateef"] {
+  font-family: "Fb Melateef", sans-serif !important;
+}
+
+select option[value="BASEGOLTA"] {
+  font-family: "BASEGOLTA", sans-serif !important;
+}
+
+select option[value="Horev CLM Heavy"] {
+  font-family: "Horev CLM Heavy", sans-serif !important;
+}
+
+select option[value="Gveret Levin Alef"] {
+  font-family: "Gveret Levin Alef", sans-serif !important;
+}
+
+select option[value="Dorian CLM Book"] {
+  font-family: "Dorian CLM Book", serif !important;
+}
+
+select option[value="BAFranknatan Bold"] {
+  font-family: "BAFranknatan Bold", sans-serif !important;
+}
+
+select option[value="BAFranknatan Light"] {
+  font-family: "BAFranknatan Light", sans-serif !important;
+}
+
+select option[value="BAFranknatan Rolltext"] {
+  font-family: "BAFranknatan Rolltext", sans-serif !important;
+}
+
+select option[value="Suez One"] {
+  font-family: "Suez One", serif !important;
+}
+
+select option[value="3Dumb"] {
+  font-family: "3Dumb", sans-serif !important;
+}
+
+/* Fix font selection dropdown */
+select[value="Noto Sans Hebrew"] {
+  font-family: "Noto Sans Hebrew", sans-serif !important;
+}
+
+select[value="Heebo"] {
+  font-family: "Heebo", sans-serif !important;
+}
+
+select[value="David Libre"] {
+  font-family: "David Libre", serif !important;
+}
+
+select[value="Suez One"] {
+  font-family: "Suez One", serif !important;
+}
+
+/* Center preview container */
+.preview-container {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center; 
+  width: 100%;
+  min-height: 100%;
+  padding: 2rem;
+  margin: 0;
+  overflow: visible;
+}
+
+/* Fix for PDF preview in admin panel */
+.pdf-preview-container {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  width: 100%;
+  min-height: calc(100vh - 100px);
+  padding: 1rem;
+  padding-top: 2rem;
+  padding-bottom: 4rem;
+  overflow-y: auto !important;
+  overflow-x: hidden;
+}
+
+/* Fix for PDF export sizing */
+@page {
+  size: A4 portrait !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+/* Fix for PDF export background */
+.pdf-export-ready img.background-image {
+  position: absolute !important;
+  top: 0 !important;
+  left: 0 !important;
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover !important;
+  margin: 0 !important;
+  padding: 0 !important; 
+  z-index: 0 !important; 
+}
+
+/* Fix for PDF export text elements */
+.pdf-export-ready .text-element {
+  position: absolute !important;
+  transform-origin: center center !important; 
+  box-sizing: border-box !important;
+  text-rendering: geometricPrecision !important;
+  -webkit-font-smoothing: antialiased !important;
+  -moz-osx-font-smoothing: grayscale !important;
+}
+
+/* New fixes for PDF export */
+.pdf-export-container {
+  width: 744px !important; /* A4 width at 90dpi */
+  height: 1052px !important; /* A4 height at 90dpi */
+  position: relative !important;
+  overflow: hidden !important;
+  background-color: white !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  box-sizing: border-box !important;
+  display: block !important;
+  transform: none !important;
+  transform-origin: top left !important;
+}
+
+/* Fix for PDF export container */
+.pdf-export-container * {
+  box-sizing: border-box !important;
+  text-rendering: geometricPrecision !important;
+  -webkit-font-smoothing: antialiased !important;
+  -moz-osx-font-smoothing: grayscale !important;
+}
+
+/* Fix for PDF export background image */
+.pdf-export-container .background-image {
+  object-fit: cover !important;
+  z-index: 0 !important; 
+  position: absolute !important;
+  top: 0 !important;
+  left: 0 !important;
+  width: 100% !important;
+  height: 100% !important;
+}
+
+/* Fix for text positioning in PDF export */
+.pdf-text-element {
+  position: absolute !important;
+  transform-origin: center center !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  white-space: pre-wrap !important;
+  overflow: visible !important;
+  text-rendering: geometricPrecision !important;
+  box-sizing: border-box !important; 
+  direction: inherit !important;
+  -webkit-font-smoothing: antialiased !important;
+  -moz-osx-font-smoothing: grayscale !important;
+}
+
+/* Fix for PDF export text alignment */
+.pdf-export-ready [style*="text-align: center"] {
+  text-align: center !important;
+  justify-content: center !important; 
+}
+
+.pdf-export-ready [style*="text-align: right"] {
+  text-align: right !important;
+  justify-content: flex-end !important; 
+}
+
+.pdf-export-ready [style*="text-align: left"] {
+  text-align: left !important;
+  justify-content: flex-start !important; 
+}
+
+/* Add fixed header for admin panel */
+.admin-panel-header {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background-color: #1f2937;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 1rem;
+  backdrop-filter: blur(8px);
+}
+
+/* Ensure proper spacing for admin panel content */
+.admin-panel-content {
+  padding-top: 1rem;
+}
+
+/* Fix for RTL text in PDF export */
+.rtl-text-export {
+  direction: rtl !important; 
+  text-align: right !important; 
+  unicode-bidi: bidi-override !important; 
+}
+
+/* Fix for canvas rendering */
+canvas.pdf-render-canvas {
+  display: block !important; 
+  width: 100% !important; 
+  height: 100% !important; 
+  background-color: white !important;
+}
+
+/* Fix for invitation preview container */
+.invitation-preview-container {
+  position: relative !important;
+  margin: 0 auto !important; 
+  background-color: white !important; 
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2) !important;
+}
+
+/* Add glow effect for selected fields */
+.shadow-glow {
+  box-shadow: 0 0 12px rgba(147, 51, 234, 0.6) !important;
+}
+
+/* Add selection highlight styles */
+.field-selected {
+  outline: 3px solid #9333ea !important;
+  outline-offset: 3px !important;
+  background-color: rgba(147, 51, 234, 0.15) !important;
+  box-shadow: 0 0 10px rgba(147, 51, 234, 0.3) !important;
+  z-index: 100 !important;
+  transition: all 0.3s ease !important;
+}
+
+/* Add hover effect for selectable fields */
+.field-selectable:hover {
+  outline: 2px dashed rgba(147, 51, 234, 0.5) !important;
+  outline-offset: 2px !important;
+  background-color: rgba(147, 51, 234, 0.05) !important;
+  cursor: pointer !important;
+  transition: all 0.3s ease !important;
+}
+
+
+
+/* Add glow effect for selected fields */
+.shadow-glow {
+  box-shadow: 0 0 12px rgba(147, 51, 234, 0.6) !important;
+}
+
+/* Add selection highlight styles */
+.field-selected {
+  outline: 3px solid #9333ea !important;
+  outline-offset: 3px !important;
+  background-color: rgba(147, 51, 234, 0.15) !important;
+  box-shadow: 0 0 10px rgba(147, 51, 234, 0.3) !important;
+  z-index: 100 !important;
+  transition: all 0.3s ease !important;
+}
+
+/* Add hover effect for selectable fields */
+.field-selectable:hover {
+  outline: 2px dashed rgba(147, 51, 234, 0.5) !important;
+  outline-offset: 2px !important;
+  background-color: rgba(147, 51, 234, 0.05) !important;
+  cursor: pointer !important;
+  transition: all 0.3s ease !important;
+}
+
