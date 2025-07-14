@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { BrowserRouter as Router, Routes, Route, useLocation, useNavigate } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
 import WebFont from 'webfontloader';
 import IntegrationsPage from './components/IntegrationsPage';
 import { Suspense } from 'react';
@@ -16,19 +16,8 @@ function ScrollToTop() {
 }
 
 function App() {
-  const [isMobile, setIsMobile] = useState(false);
   const [fontsLoaded, setFontsLoaded] = useState(false);
   
-  useEffect(() => {
-    const checkMobile = () => {
-      setIsMobile(window.innerWidth < 768);
-    };
-    
-    checkMobile();
-    window.addEventListener('resize', checkMobile);
-    return () => window.removeEventListener('resize', checkMobile);
-  }, []);
-
   useEffect(() => {
     // Load fonts asynchronously to prevent blocking
     const loadFonts = async () => {
@@ -43,16 +32,7 @@ function App() {
           new FontFace('Heebo', 'url(https://fonts.gstatic.com/s/heebo/v22/NGSpv5_NC0k9P_v6ZUCbLRAHxK1EiS2cckOnz02SXQ.woff2)', {
             display: 'swap'
           }),
-          new FontFace('Frank Ruhl Libre', 'url(https://fonts.gstatic.com/s/frankruhllibre/v15/j8_v6-DK1XtLDgIaQ8PuvqtMWg.woff2)', {
-            display: 'swap'
-          }),
           new FontFace('David Libre', 'url(https://fonts.gstatic.com/s/davidlibre/v14/snfus0W_99N64iuYSvp4W_l86p6TYS-Y.woff2)', {
-            display: 'swap'
-          }),
-          new FontFace('Miriam Libre', 'url(https://fonts.gstatic.com/s/miriamlibre/v13/DdTh798HsHwubBAqfkcBTL_vYJn_Teun9g.woff2)', {
-            display: 'swap'
-          }),
-          new FontFace('Tinos', 'url(https://fonts.gstatic.com/s/tinos/v24/buE4poGnedXvwgX8dGVh8TI-.woff2)', {
             display: 'swap'
           })
         ];
@@ -80,7 +60,7 @@ function App() {
     setTimeout(() => {
       WebFont.load({
         google: {
-          families: ['Roboto:400,500,700', 'Noto Sans Hebrew:400,500,600,700']
+          families: ['Noto Sans Hebrew:400,500,600,700']
         }
       });
     }, 1000);
@@ -102,9 +82,10 @@ function App() {
         <Navigation />
         <Routes>
           <Route path="/integrations" element={<IntegrationsPage />} />
-          <Route path="/" element={<Suspense fallback={<div>Loading...</div>}>
-            <IntegrationsPage />
-          </Suspense>
+          <Route path="/" element={
+            <Suspense fallback={<div>Loading...</div>}>
+              <IntegrationsPage />
+            </Suspense>
           } />
         </Routes>
       </div>
