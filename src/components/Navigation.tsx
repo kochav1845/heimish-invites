@@ -105,13 +105,6 @@ const IntegrationsPage: React.FC = () => {
     };
   }, [location.hash]);
 
-            }
-          }
-        }}
-      />
-    );
-  };
-
   const LoadingScreen = () => (
     <motion.div 
       className="fixed inset-0 flex flex-col items-center justify-center bg-black z-50"
